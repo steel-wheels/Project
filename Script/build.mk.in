@@ -1,0 +1,31 @@
+#
+#
+#
+
+osx_dir		= @OSX_DIR@
+ios_dir		= @IOS_DIR@
+script_dir	= @SCRIPT_DIR@
+env_file	= xcode_sets.env
+
+all: @TARGET@
+
+osx: dummy
+	(cd $(osx_dir) \
+	 && bash ../$(script_dir)/export_env.sh $(env_file) \
+	 && source ${env_file} \
+	 && echo "PROJECT_NAME=$$PROJECT_NAME" \
+	 && make -f ../$(script_dir)/install_osx.mk \
+	 && rm $(env_file) \
+	)
+
+ios: dummy
+	(cd $(ios_dir) \
+	 && bash ../$(script_dir)/export_env.sh $(env_file) \
+	 && source ${env_file} \
+	 && echo "PROJECT_NAME=$$PROJECT_NAME" \
+	 && make -f ../$(script_dir)/install_ios.mk \
+	 && rm $(env_file) \
+	)
+
+dummy:
+

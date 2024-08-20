@@ -1,0 +1,72 @@
+# Makefile
+
+TAG = rel_20210505
+
+all: coconut cobalt kiwiscript amber kiwicontrols kiwicomponents \
+     jstools jsterminal
+
+cobalt: dummy
+	(cd Cobalt && make -f Script/install_all.mk)
+
+coconut: dummy
+	(cd Coconut && make -f Script/install_all.mk)	
+
+kiwiscript: dummy
+	(cd KiwiScript && make -f Script/install_all.mk)
+
+amber: dummy
+	(cd Amber && make -f Script/install_all.mk)
+
+kiwicomponents: dummy
+	cp KiwiScript/KiwiLibrary/Resource/Library/types/KiwiLibrary.d.ts \
+	   KiwiComponents/Resource/Library/types/
+	cp KiwiScript/KiwiShell/Resource/Library/types/KiwiShell.d.ts \
+	   KiwiComponents/Resource/Library/types/
+	(cd KiwiComponents && make -f Script/install_all.mk)
+
+kiwicontrols: dummy
+	(cd KiwiControls && make -f Script/install_all.mk)
+
+jsterminal: dummy
+	cp KiwiScript/KiwiLibrary/Resource/Library/types/KiwiLibrary.d.ts \
+	   JSTerminal/Resource/Library/types/
+	cp KiwiScript/KiwiShell/Resource/Library/types/KiwiShell.d.ts \
+	   JSTerminal/Resource/Library/types/
+	cp KiwiComponents/Resource/Library/types/KiwiComponent.d.ts \
+	   JSTerminal/Resource/Library/types/
+	(cd JSTerminal && make -f Script/install_all.mk)
+
+jstools: dummy
+	(cd JSTools/Project && make -f ../Script/install_osx.mk)
+
+clean:
+	(cd ~ ; rm -rf build)
+	(cd ~ ; mkdir ~/build)
+	(cd ~/Library ; rm -rf Frameworks)
+	(cd ~/Library ; mkdir Frameworks)
+	(cd ~/local ; rm -rf Frameworks)
+	(cd ~/local ; mkdir Frameworks)
+	(cd /Applications ; rm -rf JSTerminal.app)
+	(cd ~/Library/Containers ; rm -rf github.com.steelwheels.*)
+	(cd ~/tools ; rm -rf bin bundles)
+
+status: dummy
+	(cd Coconut ; git status)
+	(cd Cobalt ; git status)
+	(cd KiwiControls ; git status)
+	(cd KiwiComponents ; git status)
+	(cd KiwiScript ; git status)
+	(cd Amber ; git status)
+	(cd JSTools ; git status)
+	(cd JSTerminal ; git status)
+
+tags:
+	(cd KiwiControls && git tag $(TAG) && git push origin $(TAG))
+	(cd KiwiComponents && git tag $(TAG) && git push origin $(TAG))
+	(cd KiwiScript && git tag $(TAG) && git push origin $(TAG))
+	(cd Amber && git tag $(TAG) && git push origin $(TAG))
+	(cd JSTools && git tag $(TAG) && git push origin $(TAG))
+	(cd JSTerminal && git tag $(TAG) && git push origin $(TAG))
+
+dummy:
+
