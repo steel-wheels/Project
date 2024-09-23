@@ -4,8 +4,13 @@
 
 include Script/doc.mk
 
-all: README.md
+src	= README.md4 \
+	  Reference.md4
+dst	= $(src:.md4=.md)
+
+all: $(dst)
 
 clean:
-	rm -f README.md
+	rm -f $(dst)
+
 
