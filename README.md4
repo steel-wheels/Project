@@ -28,6 +28,9 @@ Every products of this project is open source. They will be distributed under [G
   - [ArisiaComponents](ARISIACOMP_TOP): Define GUI and database components 
   - [ArisiaTools](ARISIATOOLS_TOP): Command line tools for Arisia programming environment.
 
+## Documents
+* [Safari Web Extension](./Documents/SafariWebExtension.md): How to develop the Safari Web Extension.
+
 ## Reference
 See [Reference Page](./Reference.md).
 
