@@ -2,15 +2,21 @@
 # Makefile
 #
 
-include Script/doc.mk
 
-src	= README.md4 \
-	  Reference.md4
-dst	= $(src:.md4=.md)
+all:
+	echo "make [status | build]"
 
-all: $(dst)
+status:
+	(cd MultiDataKit/Project && git status)
+	(cd MultiUIKit/Project   && git status)
 
-clean:
-	rm -f $(dst)
+build: dummy
+	(cd MultiDataKit/Project && make -f ../Script/install.mk)
+	(cd MultiUIKit/Project   && make -f ../Script/install.mk)
 
+clean: dummy
+	(cd MultiDataKit/Project && make -f ../Script/install.mk clean)
+	(cd MultiUIKit/Project   && make -f ../Script/install.mk clean)
+
+dummy:
 

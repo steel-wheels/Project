@@ -1,5 +1,8 @@
 # Reference
 
+## macOS programming
+* [Pasteboard Programming Guide](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/PasteboardGuide106/Introduction/Introduction.html#//apple_ref/doc/uid/TP40008099)
+
 ## Swift
 ### Swift concurrency support
 * [Swift migration guide](https://swift-migration-guide.jp/documentation/migrationguide)
