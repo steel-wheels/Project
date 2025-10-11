@@ -9,6 +9,8 @@ Every products of this project is open source. They will be distributed under [G
 ## Products
 ### Application software
 * [ArisiaCard](https://github.com/steel-wheels/ArisiaCard)
+
+### Frameworks
 * [MultiDataKit](https://github.com/steel-wheels/MultiDataKit)
 * [MultiUIKit](https://github.com/steel-wheels/MultiUIKit)
 * [MultiFrameKit](https://github.com/steel-wheels/MultiFrameKit)
