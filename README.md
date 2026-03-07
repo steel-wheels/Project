@@ -16,6 +16,10 @@ Every products of this project is open source. They will be distributed under [G
 * [MultiFrameKit](https://github.com/steel-wheels/MultiFrameKit)
 * [ArisiaPlatform](https://github.com/steel-wheels/ArisiaPlatform)
 
+### Target OS
+* macOS: 26.0
+* iOS:   26.0
+
 ## Reference
 See [Reference Page](./Reference.md).
 
