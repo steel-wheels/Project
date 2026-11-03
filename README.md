@@ -7,18 +7,18 @@ This project is started to develop open source software for macOS and iOS (iPhon
 Every products of this project is open source. They will be distributed under [GNU General Public License version 2](https://opensource.org/licenses/GPL-2.0), [GNU Lesser General Public License version 2.1](https://opensource.org/licenses/LGPL-2.1).
 
 ## Products
+### Target OS
+* macOS: 26.0
+* iOS:   26.0
+
 ### Application software
-* [ArisiaCard](https://github.com/steel-wheels/ArisiaCard)
+* [md4](https://github.com/steel-wheels/md4)
 
 ### Frameworks
 * [MultiDataKit](https://github.com/steel-wheels/MultiDataKit)
 * [MultiUIKit](https://github.com/steel-wheels/MultiUIKit)
 * [MultiFrameKit](https://github.com/steel-wheels/MultiFrameKit)
-* [ArisiaPlatform](https://github.com/steel-wheels/ArisiaPlatform)
-
-### Target OS
-* macOS: 26.0
-* iOS:   26.0
+* [MultiGraphicsKit](https://github.com/steel-wheels/MultiGraphicsKit)
 
 ## Reference
 See [Reference Page](./Reference.md).
